@@ -14,12 +14,16 @@ File Name | Description of File
 4.lookups (Blob) | Other miscellaneous files like Calendar Lookup and Country lookup files.
 
 ### The below image represents the solution architechture for this project :
-![](./Slides_and_Screenshots(Media)/project_solution_architecture.png)
+![image](https://user-images.githubusercontent.com/79434863/180002640-08b7bb82-116d-4960-a17a-301f7c240c43.png)
 
-
+* **Linked Services** are craeted to connect to the Blob Storage, ADLS raw and processed containers, and SQL database
+* **DataSets** are created with respect to source and target files.
+* **Pipelines** are created to execute Copy Activities, Data Flows, and to Orchestrate child pipelines
 
 ### Step 1: 
-* *population_by_age.tsv.gz (zipped_file)* has been uploaded into the Azure Blob Storage manually. After that I initialized the Azure Data Factory and created the **Linked Service** which connects to the Blob Storage and created **DataSet** points for the particular file. Along with that I created the **Pipeline** which has a **Copy Activity** that helps to Copy the Population Data from Blob storage to the **ADLS gen2**
+* *population_by_age.tsv.gz (zipped_file)* has been uploaded into the Azure Blob Storage manually. 
+* **Pipeline** is created which has a **Copy Activity** that helps to Copy the Population Data from Blob storage to the **ADLS gen2**
+* **Pipeline** is created which has a **Copy Activity** that helps to Copy the Population Data from Blob storage to the **ADLS gen2**
 
 
 ![](./Slides_and_Screenshots(Media)/population_data_blob_ingestion.png)
