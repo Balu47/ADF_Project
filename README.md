@@ -9,10 +9,9 @@ The data has been taken from EuroStat and European Centre for Disease Prevention
 File Name | Description of File
 -------- | ---------
 1.population_by_age.tsv.gz (EuroStat/Blob) | This is a zipped file that contains the population data of countries.
-2.cases_deaths.csv (ECDC) | This csv contains the number emerging Covid Cases and Deaths followed by the each day.
+2.cases_deaths.csv (ECDC) | This csv file contains the weekly emerging Covid Cases and Deaths
 3.hospital_admissions.csv (ECDC) | This csv file contains the Daily Hospital Admissions, Daily ICU admissions, Weekly Hospital Admissions per 100k, Weekly ICU Admissions per 100k.
-4.testing.csv (ECDC) | This csv file contains the emerging covid cases, tests being done, testing_rate and covid postive_rate on the weekly basis.
-5.lookups (Blob) | Other miscellaneous  files like Calendar Lookup/dim and Country lookup/dim files used.
+4.lookups (Blob) | Other miscellaneous files like Calendar Lookup and Country lookup files.
 
 ### The below image represents the solution architechture for this project :
 ![](./Slides_and_Screenshots(Media)/project_solution_architecture.png)
@@ -20,7 +19,7 @@ File Name | Description of File
 
 
 ### Step 1: 
-* I have uploaded the *population_by_age.tsv.gz (zipped_file)* into the Azure Blob Storage manually. After that I initialized the Azure Data Factory and created the **Linked Service** which connects to the Blob Storage and created **DataSet** points for the particular file. Along with that I created the **Pipeline** which has a **Copy Activity** that helps to Copy the Population Data from Blob storage to the **ADLS gen2**
+* *population_by_age.tsv.gz (zipped_file)* has been uploaded into the Azure Blob Storage manually. After that I initialized the Azure Data Factory and created the **Linked Service** which connects to the Blob Storage and created **DataSet** points for the particular file. Along with that I created the **Pipeline** which has a **Copy Activity** that helps to Copy the Population Data from Blob storage to the **ADLS gen2**
 
 
 ![](./Slides_and_Screenshots(Media)/population_data_blob_ingestion.png)
