@@ -42,7 +42,7 @@ File Name | Description of File
 
 ### Step 3:
 * The 2 source files - cases_and_deaths, hospial_admissions that are present in raw container are tarnsformed using Dataflows in ADF and loaded to ADLS processed container
-* Various transformations like Lookup, Join, Filter, Sort, Conditional split, Aggregrate, Derived Column, Pivot, Surrogate Key are used basd on Bussiness logic
+* Various transformations like Lookup, Join, Filter, Sort, Conditional split, Aggregrate, Derived Column, Pivot, Surrogate Key are used based on Bussiness logic
 
 cases_and_deaths
 ![image](https://user-images.githubusercontent.com/79434863/180036961-ca7c484f-fb68-41f6-87fb-f47395e898fc.png)
